@@ -1,0 +1,30 @@
+name: CI
+on: [push]
+
+jobs:
+  linux:
+    name: Test CentOS 7 installs
+    runs-on: ubuntu-latest
+    container: centos:${{ matrix.centos-version }}
+    strategy:
+      matrix:
+        centos-version: [
+          '7.1.1503',
+          '7.2.1511',
+          '7.3.1611',
+          '7.4.1708',
+          '7.5.1804',
+          '7.6.1810'
+        ]
+
+    steps:
+    - name: Fail install devtoolset-3 without vault
+      run: |
+        yum install -y centos-release-scl
+        yum install -y devtoolset-3 && exit 1 || exit 0
+
+    - name: Install devtoolset-3 with vault
+      run: |
+        yum install -y centos-release-scl
+        set -x
+        curl -L $GITHUB_SHA
