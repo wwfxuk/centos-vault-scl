@@ -9,7 +9,7 @@
 name=CentOS-<VERSION> - SCLo <VARIANT>
 baseurl=http://vault.centos.org/centos/<VERSION>/sclo/$basearch/<VARIANT>/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C<VERSION>-centos-sclo-<VARIANT>-testing]

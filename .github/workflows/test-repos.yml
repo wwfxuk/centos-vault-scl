@@ -27,4 +27,4 @@ jobs:
       run: |
         yum install -y centos-release-scl
         curl -sSL https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/activate.sh | bash
-        # yum install -y devtoolset-3
+        yum install -y devtoolset-3
