@@ -1,4 +1,4 @@
-# Inspired by CentOS-SCLo-rh.repo
+# Inspired by CentOS-SCLo-scl-rh.repo
 #
 # Please see http://wiki.centos.org/SpecialInterestGroup/SCLo and
 # https://github.com/wwfxuk/centos-vault-scl for more information
@@ -9,7 +9,7 @@
 name=CentOS-7.1.1503 - SCLo rh
 baseurl=http://vault.centos.org/centos/7.1.1503/sclo/$basearch/rh/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.1.1503-centos-sclo-rh-testing]
@@ -39,7 +39,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 name=CentOS-7.2.1511 - SCLo rh
 baseurl=http://vault.centos.org/centos/7.2.1511/sclo/$basearch/rh/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.2.1511-centos-sclo-rh-testing]
@@ -69,7 +69,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 name=CentOS-7.3.1611 - SCLo rh
 baseurl=http://vault.centos.org/centos/7.3.1611/sclo/$basearch/rh/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.3.1611-centos-sclo-rh-testing]
@@ -99,7 +99,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 name=CentOS-7.4.1708 - SCLo rh
 baseurl=http://vault.centos.org/centos/7.4.1708/sclo/$basearch/rh/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.4.1708-centos-sclo-rh-testing]
@@ -129,7 +129,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 name=CentOS-7.5.1804 - SCLo rh
 baseurl=http://vault.centos.org/centos/7.5.1804/sclo/$basearch/rh/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.5.1804-centos-sclo-rh-testing]
@@ -159,7 +159,7 @@ gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 name=CentOS-7.6.1810 - SCLo rh
 baseurl=http://vault.centos.org/centos/7.6.1810/sclo/$basearch/rh/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.6.1810-centos-sclo-rh-testing]
