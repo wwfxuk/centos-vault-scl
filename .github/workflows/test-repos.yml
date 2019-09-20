@@ -26,5 +26,5 @@ jobs:
     - name: Install devtoolset-3 with vault
       run: |
         yum install -y centos-release-scl
-        set -x
-        curl -L $GITHUB_SHA
+        curl -L https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/activate.sh | bash
+        # yum install -y devtoolset-3
