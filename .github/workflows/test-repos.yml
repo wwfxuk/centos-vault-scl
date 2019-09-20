@@ -2,7 +2,20 @@ name: CI
 on: [push]
 
 jobs:
-  linux:
+  repos-upto-date:
+    name: Check .repos are up to date
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Check regenerated are the same
+      run: |
+        bash template-to-repos.sh
+        git diff --quiet *.repo
+
+  centos-installs:
     name: Test CentOS 7 installs
     runs-on: ubuntu-latest
     container: centos:${{ matrix.centos-version }}
