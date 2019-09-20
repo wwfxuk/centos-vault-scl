@@ -23,6 +23,17 @@ See also:
 - Repository/naming will not clash with one from `centos-release-scl*`
 
 
+## Usage
+
+Install `centos-release-scl` first, then run `activate.sh` from master branch.
+
+
+```bash
+yum install -y centos-release-scl
+curl -sSL https://raw.githubusercontent.com/wwfxuk/centos-vault-scl/master/activate.sh | bash
+yum install -y devtoolset-3
+```
+
 ## Development
 
 To generate the `*.repo` files from the template, run
