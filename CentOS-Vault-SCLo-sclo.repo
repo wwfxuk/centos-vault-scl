@@ -1,13 +1,15 @@
 # Inspired by CentOS-SCLo-sclo.repo
 #
-# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo for more
-# information
+# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo and
+# https://github.com/wwfxuk/centos-vault-scl for more information
+
+# 7.1.1503
 
 [C7.1.1503-centos-sclo-sclo]
 name=CentOS-7.1.1503 - SCLo sclo
 baseurl=http://vault.centos.org/centos/7.1.1503/sclo/$basearch/sclo/
 gpgcheck=1
-enabled=0
+enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.1.1503-centos-sclo-sclo-testing]
@@ -31,12 +33,13 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
+# 7.2.1511
 
 [C7.2.1511-centos-sclo-sclo]
 name=CentOS-7.2.1511 - SCLo sclo
 baseurl=http://vault.centos.org/centos/7.2.1511/sclo/$basearch/sclo/
 gpgcheck=1
-enabled=0
+enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.2.1511-centos-sclo-sclo-testing]
@@ -60,12 +63,13 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
+# 7.3.1611
 
 [C7.3.1611-centos-sclo-sclo]
 name=CentOS-7.3.1611 - SCLo sclo
 baseurl=http://vault.centos.org/centos/7.3.1611/sclo/$basearch/sclo/
 gpgcheck=1
-enabled=0
+enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.3.1611-centos-sclo-sclo-testing]
@@ -89,12 +93,13 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
+# 7.4.1708
 
 [C7.4.1708-centos-sclo-sclo]
 name=CentOS-7.4.1708 - SCLo sclo
 baseurl=http://vault.centos.org/centos/7.4.1708/sclo/$basearch/sclo/
 gpgcheck=1
-enabled=0
+enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.4.1708-centos-sclo-sclo-testing]
@@ -118,12 +123,13 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
+# 7.5.1804
 
 [C7.5.1804-centos-sclo-sclo]
 name=CentOS-7.5.1804 - SCLo sclo
 baseurl=http://vault.centos.org/centos/7.5.1804/sclo/$basearch/sclo/
 gpgcheck=1
-enabled=0
+enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.5.1804-centos-sclo-sclo-testing]
@@ -147,12 +153,13 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
+# 7.6.1810
 
 [C7.6.1810-centos-sclo-sclo]
 name=CentOS-7.6.1810 - SCLo sclo
 baseurl=http://vault.centos.org/centos/7.6.1810/sclo/$basearch/sclo/
 gpgcheck=1
-enabled=0
+enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C7.6.1810-centos-sclo-sclo-testing]

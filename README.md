@@ -21,3 +21,9 @@ See also:
     - 7.6.1810
 - Match naming convention as found from `CentOS-Vault.repo` from `centos-release`
 - Repository/naming will not clash with one from `centos-release-scl*`
+
+
+## Development
+
+To generate the `*.repo` files from the template, run `template-to-repos.sh`.
+These generated `*.repo` should then be committed.

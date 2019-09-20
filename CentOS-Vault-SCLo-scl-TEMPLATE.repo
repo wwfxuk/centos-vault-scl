@@ -1,7 +1,9 @@
 # Inspired by CentOS-SCLo-<VARIANT>.repo
 #
-# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo for more
-# information
+# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo and
+# https://github.com/wwfxuk/centos-vault-scl for more information
+
+# <VERSION>
 
 [C<VERSION>-centos-sclo-<VARIANT>]
 name=CentOS-<VERSION> - SCLo <VARIANT>
@@ -30,3 +32,4 @@ baseurl=http://debuginfo.centos.org/centos/<VERSION>/sclo/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
