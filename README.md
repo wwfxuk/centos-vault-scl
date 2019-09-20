@@ -25,5 +25,6 @@ See also:
 
 ## Development
 
-To generate the `*.repo` files from the template, run `template-to-repos.sh`.
-These generated `*.repo` should then be committed.
+To generate the `*.repo` files from the template, run
+`bash template-to-repos.sh`. These generated `*.repo` should then be committed,
+replacing existing/old ones.
