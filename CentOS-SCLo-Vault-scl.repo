@@ -1,13 +1,9 @@
-# Inspired by CentOS-SCLo-sclo.repo
-#
-# Please see http://wiki.centos.org/SpecialInterestGroup/SCLo for more
-# information
 
 [C<VERSION>-centos-sclo-sclo]
 name=CentOS-<VERSION> - SCLo sclo
 baseurl=http://vault.centos.org/centos/<VERSION>/sclo/$basearch/sclo/
 gpgcheck=1
-enabled=1
+enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
 [C<VERSION>-centos-sclo-sclo-testing]
@@ -30,3 +26,4 @@ baseurl=http://debuginfo.centos.org/centos/<VERSION>/sclo/$basearch/
 gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
