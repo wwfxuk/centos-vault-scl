@@ -32,7 +32,7 @@ echo "into $(pwd)..."
 curl -sL "${CENTOS_VAULT_SCL_TAR}" | tar -v --strip-components=1 -xz '*.repo'
 ls -lah
 
-CENTOS_RELEASE=$(grep -oP '[\d\.]+' /etc/centos-release)
+CENTOS_RELEASE=${CENTOS_RELEASE:-$(grep -oP '[\d\.]+' /etc/centos-release)}
 
 echo "Enabling C${CENTOS_RELEASE}-centos-sclo-sclo..."
 yum-config-manager --enable C${CENTOS_RELEASE}-centos-sclo-sclo | grep -q '^enabled = '
