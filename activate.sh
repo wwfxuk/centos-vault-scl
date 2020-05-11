@@ -40,19 +40,12 @@ CENTOS_RELEASE=${CENTOS_RELEASE:-$(grep -oP '[\d\.]+' /etc/centos-release)}
 # if CentOS 7.7 and newer (test via build number)
 [ "${CENTOS_RELEASE##*.}" -le 1810 ] || CENTOS_RELEASE="7.6.1810"
 
-function togglerepo() {
-    ACTION="$1"
-    PREFIX="${2:-}"
-    for REPO in sclo rh
-    do
-	    REPO="${PREFIX}centos-sclo-${REPO}"
-	    echo "${ACTION^}abling ${REPO}..."
-		yum-config-manager "--${ACTION}able" "${REPO}" | grep -q '^enabled = '
-    done
-}
-
-# Enable archive and disable current
-togglerepo "en" "C${CENTOS_RELEASE}-"
+for SUFFIX in sclo rh
+do
+    REPO="C${CENTOS_RELEASE}-centos-sclo-${SUFFIX}"
+    echo "${ACTION^}abling ${REPO}..."
+    yum-config-manager --enable "${REPO}" | grep -q '^enabled = '
+done
 
 echo '========================================================================'
 echo 'You shoud be able to install packages like devtoolset-3 now!'
