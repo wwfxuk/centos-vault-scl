@@ -33,21 +33,27 @@ echo "into $(pwd)..."
 curl -sL "${CENTOS_VAULT_SCL_TAR}" | tar -v --strip-components=1 -xz '*.repo'
 ls -lah
 
+# e.g. 7.7.1908
 CENTOS_RELEASE=${CENTOS_RELEASE:-$(grep -oP '[\d\.]+' /etc/centos-release)}
 
-echo "Enabling C${CENTOS_RELEASE}-centos-sclo-sclo..."
-yum-config-manager --enable C${CENTOS_RELEASE}-centos-sclo-sclo | grep -q '^enabled = '
+# Enable older archives for devtoolset-3, devtoolset-6, etc
+# if CentOS 7.7 and newer (test via build number)
+[ "${CENTOS_RELEASE##*.}" -le 1810 ] || CENTOS_RELEASE="7.6.1810"
 
-echo "Enabling C${CENTOS_RELEASE}-centos-sclo-rh..."
-yum-config-manager --enable C${CENTOS_RELEASE}-centos-sclo-rh | grep -q '^enabled = '
+function togglerepo() {
+    ACTION="$1"
+    PREFIX="${2:-}"
+    for REPO in sclo rh
+    do
+	    REPO="${PREFIX}centos-sclo-${REPO}"
+	    echo "${ACTION^}abling ${REPO}..."
+		yum-config-manager "--${ACTION}able" "${REPO}" | grep -q '^enabled = '
+    done
+}
 
-
-echo "Disabling centos-sclo-sclo..."
-yum-config-manager --disable centos-sclo-sclo | grep -q '^enabled = '
-
-
-echo "Disabling centos-sclo-rh..."
-yum-config-manager --disable centos-sclo-rh | grep -q '^enabled = '
+# Enable archive and disable current
+togglerepo "en" "C${CENTOS_RELEASE}-"
+togglerepo "dis"
 
 echo '========================================================================'
 echo 'You shoud be able to install packages like devtoolset-3 now!'
