@@ -22,10 +22,11 @@ set -eu -o pipefail
 cd /etc/yum.repos.d/
 CENTOS_VAULT_SCL_TAR="https://github.com/wwfxuk/centos-vault-scl/archive/${GITHUB_SHA:-master}.tar.gz"
 
-DEPS_NEEDED=""
-command -v tar || DEPS_NEEDED+=" tar"
-command -v yum-config-manager || DEPS_NEEDED+=" yum-utils"
-test -z "${DEPS_NEEDED}" || ( echo "Installing dependencies and updating curl..." && yum install -y $DEPS_NEEDED curl)
+declare -a DEPS_NEEDED
+DEPS_NEEDED=(curl)
+command -v tar || DEPS_NEEDED+=("tar")
+command -v yum-config-manager || DEPS_NEEDED+=("yum-utils")
+test -z "${DEPS_NEEDED}" || ( echo "Installing dependencies and updating curl..." && yum install -y "${DEPS_NEEDED[@]}")
 
 echo "Extracting *.repo files from ${CENTOS_VAULT_SCL_TAR}"
 echo "into $(pwd)..."

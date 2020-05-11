@@ -183,3 +183,33 @@ gpgcheck=1
 enabled=0
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
 
+# 7.7.1908
+
+[C7.7.1908-centos-sclo-rh]
+name=CentOS-7.7.1908 - SCLo rh
+baseurl=http://vault.centos.org/centos/7.7.1908/sclo/$basearch/rh/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[C7.7.1908-centos-sclo-rh-testing]
+name=CentOS-7.7.1908 - SCLo rh Testing
+baseurl=http://buildlogs.centos.org/centos/7.7.1908/sclo/$basearch/rh/
+gpgcheck=0
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[C7.7.1908-centos-sclo-rh-source]
+name=CentOS-7.7.1908 - SCLo rh Sources
+baseurl=http://vault.centos.org/centos/7.7.1908/sclo/Source/rh/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+
+[C7.7.1908-centos-sclo-rh-debuginfo]
+name=CentOS-7.7.1908 - SCLo rh Debuginfo
+baseurl=http://debuginfo.centos.org/centos/7.7.1908/sclo/$basearch/
+gpgcheck=1
+enabled=0
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-SIG-SCLo
+

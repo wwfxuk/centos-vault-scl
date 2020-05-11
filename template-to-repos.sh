@@ -2,7 +2,7 @@
 set -eu -o pipefail
 
 TEMPLATE=${TEMPLATE:-CentOS-Vault-SCLo-scl.template}
-VERSIONS=${@:-7.1.1503 7.2.1511 7.3.1611 7.4.1708 7.5.1804 7.6.1810}
+VERSIONS=${@:-7.1.1503 7.2.1511 7.3.1611 7.4.1708 7.5.1804 7.6.1810 7.7.1908}
 
 for VARIANT in sclo rh
 do
