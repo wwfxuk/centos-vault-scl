@@ -43,7 +43,7 @@ CENTOS_RELEASE=${CENTOS_RELEASE:-$(grep -oP '[\d\.]+' /etc/centos-release)}
 for SUFFIX in sclo rh
 do
     REPO="C${CENTOS_RELEASE}-centos-sclo-${SUFFIX}"
-    echo "${ACTION^}abling ${REPO}..."
+    echo "Enabling ${REPO}..."
     yum-config-manager --enable "${REPO}" | grep -q '^enabled = '
 done
 
