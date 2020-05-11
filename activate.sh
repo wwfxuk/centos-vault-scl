@@ -53,7 +53,6 @@ function togglerepo() {
 
 # Enable archive and disable current
 togglerepo "en" "C${CENTOS_RELEASE}-"
-togglerepo "dis"
 
 echo '========================================================================'
 echo 'You shoud be able to install packages like devtoolset-3 now!'
