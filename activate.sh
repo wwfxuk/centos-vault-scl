@@ -20,7 +20,8 @@
 set -eu -o pipefail
 
 cd /etc/yum.repos.d/
-CENTOS_VAULT_SCL_TAR="https://github.com/wwfxuk/centos-vault-scl/archive/${GITHUB_SHA:-master}.tar.gz"
+SCL_TAR_SHA="${SCL_TAR_SHA:-master}"
+CENTOS_VAULT_SCL_TAR="https://github.com/wwfxuk/centos-vault-scl/archive/${SCL_TAR_SHA}.tar.gz"
 
 declare -a DEPS_NEEDED
 DEPS_NEEDED=(curl)
