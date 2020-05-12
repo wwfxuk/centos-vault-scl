@@ -21,16 +21,22 @@ jobs:
     container: centos:${{ matrix.centos-version }}
     strategy:
       matrix:
-        centos-version: [
-          '7.1.1503',
-          '7.2.1511',
-          '7.3.1611',
-          '7.4.1708',
-          '7.5.1804',
-          '7.6.1810'
-        ]
+        centos-version:
+        - 7
+        - 7.1.1503
+        - 7.2.1511
+        - 7.3.1611
+        - 7.4.1708
+        - 7.5.1804
+        - 7.6.1810
+        - 7.7.1908
 
     steps:
+    - name: Report CentOS version
+      run: |
+        cat /etc/centos-release
+        echo "CENTOS_RELEASE=${CENTOS_RELEASE:-$(grep -oP '[\d\.]+' /etc/centos-release)}"
+
     - name: Fail install devtoolset-3 without vault
       run: |
         yum install -y centos-release-scl
@@ -39,5 +45,5 @@ jobs:
     - name: Install devtoolset-3 with vault
       run: |
         yum install -y centos-release-scl
-        curl -sSL https://raw.githubusercontent.com/${GITHUB_REPOSITORY}/${GITHUB_SHA}/activate.sh | bash
+        curl -sSL https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/activate.sh | bash
         yum install -y --skip-broken devtoolset-3

@@ -1,4 +1,4 @@
-[![CI Build Status](https://github.com/wwfxuk/centos-vault-scl/workflows/CI/badge.svg)](https://github.com/wwfxuk/centos-vault-scl/actions)
+[![master CI Build Status]][master CI link]
 
 # centos-vault-scl
 
@@ -88,3 +88,6 @@ yum-config-manager --enable C7.3.1611-centos-sclo-sclo-debuginfo
 There may be cases where you might need to change the CI tests e.g. if you are
 adding a new feature. The main CI workflow files is located in
 `.github/workflows/test-repos.yml`.
+
+[master CI Build Status]: https://github.com/wwfxuk/centos-vault-scl/workflows/CI/badge.svg?branch=master
+[master CI link]: https://github.com/wwfxuk/centos-vault-scl/actions?query=branch%3Amaster
