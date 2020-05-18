@@ -45,5 +45,5 @@ jobs:
     - name: Check devtoolset-3 with vault
       run: |
         yum install -y centos-release-scl
-        curl -sSL https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/activate.sh | SCL_TAR_SHA=${{ github.sha}} bash
+        curl -sSL https://raw.githubusercontent.com/${{ github.repository }}/${{ github.sha }}/activate.sh | SCL_TAR_SHA=${{ github.sha}} bash -x
         yum info --skip-broken devtoolset-3
