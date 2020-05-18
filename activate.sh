@@ -29,7 +29,7 @@ set -eu -o pipefail
 declare -a DEPS_NEEDED
 command -v tar || DEPS_NEEDED+=("tar" "curl")  # missing/needs updating for 7.1
 command -v yum-config-manager || DEPS_NEEDED+=("yum-utils")  # missing for 7.1 and 7.2
-test -z "${DEPS_NEEDED}" || ( echo "Installing dependencies and updating curl..." && yum install -y "${DEPS_NEEDED[@]}")
+test -z "${DEPS_NEEDED:-}" || ( echo "Installing dependencies and updating curl..." && yum install -y "${DEPS_NEEDED[@]}")
 
 CENTOS_VAULT_SCL_TAR="https://github.com/wwfxuk/centos-vault-scl/archive/${SCL_TAR_SHA:-master}.tar.gz"
 cd /etc/yum.repos.d/
