@@ -37,9 +37,9 @@ test -t 1 && CURL_FLAGS+=("-#") || CURL_FLAGS+=("-sS")
 CURL_FLAGS+=("https://github.com/wwfxuk/centos-vault-scl/archive/${SCL_TAR_SHA:-master}.tar.gz")
 
 cd /etc/yum.repos.d/
-echo "Extracting *.repo files from ${CENTOS_VAULT_SCL_TAR}"
+echo "Extracting *.repo files from ${CURL_FLAGS[-1]}"
 echo "into $(pwd)..."
-curl "${CURL_FLAGS[@]}" "${CENTOS_VAULT_SCL_TAR}" | tar -v --strip-components=1 -xz '*.repo'
+curl "${CURL_FLAGS[@]}" | tar -v --strip-components=1 -xz '*.repo'
 ls -lah
 
 
